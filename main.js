@@ -279,7 +279,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Event listeners for form field validation on input
     document.querySelectorAll('input').forEach(input => {
         input.addEventListener('input', validateFormField);
     });
