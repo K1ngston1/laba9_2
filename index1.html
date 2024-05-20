@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-4 mt-3">
+            Fetch API
+        </h1>
+        <button class="btn btn-primary" id="myBtn">Get Data</button>
+        <select id="sortOptions" class="btn-1 btn-secondary mt-3">
+            <option value="nameAsc">Sort by Name (A-Z)</option>
+            <option value="nameDesc">Sort by Name (Z-A)</option>
+            <option value="ageAsc">Sort by Age (Ascending)</option>
+            <option value="ageDesc">Sort by Age (Descending)</option>
+            <option value="regDateAsc">Sort by Registration Date (Ascending)</option>
+            <option value="regDateDesc">Sort by Registration Date (Descending)</option>
+        </select> 
+        <div class="filter-container">
+            <input type="text" id="filterName" placeholder="Filter by Name">
+            <input type="text" id="filterLocation" placeholder="Filter by Location">
+            <input type="text" id="filterEmail" placeholder="Filter by Email">
+            <input type="number" id="filterAge" placeholder="Filter by Age">
+        </div>
+    </div>
+    <div id="output"></div>
+    <script src="main2.js"></script>
+</body>
+</html>

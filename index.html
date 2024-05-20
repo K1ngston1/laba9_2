@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Forms</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab-header">
+                <div class="tab-link active" data-tab="signup">Signup</div>
+                <div class="tab-link" data-tab="login">Login</div>
+            </div>
+            <div class="tab-content">
+                <form id="signup" class="form-tab active" novalidate>
+                    <h2>Create an Account</h2>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter username" required minlength="3" maxlength="15">
+                        <small class="error" id="username-error"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}">
+                        <small class="error" id="email-error"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-group">
+                            <input type="password" id="password" name="password" placeholder="Enter password" required maxlength="10">
+                            <span class="toggle-password" id="toggle-password-signup">&#128065;</span>
+                        </div>
+                        <small class="error" id="password-error"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="input-group">
+                            <input type="password" id="confirm-password" placeholder="Confirm password" required maxlength="10">
+                            <span class="toggle-password" id="toggle-confirm-password">&#128065;</span>
+                        </div>
+                        <small class="error" id="confirm-password-error"></small>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Signup</button>
+                    </div>
+                </form>
+                <form id="login" class="form-tab" novalidate>
+                    <h2>Login Here</h2>
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" name="username" placeholder="Enter username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <div class="input-group">
+                            <input type="password" id="login-password" name="password" placeholder="Enter password" required maxlength="10">
+                            <span class="toggle-password" id="toggle-password-login">&#128065;</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="modal-message"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
