@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
     signupForm.addEventListener('submit', handleSubmit);
     loginForm.addEventListener('submit', handleSubmit);
 
-    // Signup function to store data in localStorage
+   
     async function signUp(formData) {
         await new Promise(resolve => setTimeout(resolve, 3000));
 
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
 
-    // Show modal with message
+
     function showModal(message) {
         const modal = document.getElementById('modal');
         const modalMessage = document.getElementById('modal-message');
