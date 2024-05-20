@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const togglePasswordIcons = document.querySelectorAll('.toggle-password');
     const USER_DATA_KEY = 's4e32q-32423-2348234-234';
 
-    // Tab switching
+
     const tabLinks = document.querySelectorAll('.tab-link');
     tabLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Toggle password visibility
+
     togglePasswordIcons.forEach(icon => {
         icon.addEventListener('click', function() {
             const input = this.previousElementSibling;
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Function to toggle password visibility
+ 
     function togglePasswordVisibility(event) {
         const input = event.target;
         const toggleIcon = input.nextElementSibling;
@@ -44,13 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Event listeners for password visibility toggling
+
     const passwordFields = document.querySelectorAll('input[type="password"]');
     passwordFields.forEach(field => {
         field.addEventListener('input', togglePasswordVisibility);
     });
 
-    // Validate form
+
     function validateForm(form) {
         let isValid = true;
         const inputs = form.querySelectorAll('input');
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return isValid;
     }
 
-    // Show error message
+
     function showError(formGroup, message) {
         const errorElement = document.createElement('div');
         errorElement.classList.add('error-message');
@@ -111,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
         formGroup.appendChild(errorElement);
     }
 
-    // Handle form submission
     async function handleSubmit(event) {
         event.preventDefault();
         const form = event.target;
@@ -141,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Event listeners for form submission
+ 
     signupForm.addEventListener('submit', handleSubmit);
     loginForm.addEventListener('submit', handleSubmit);
 
@@ -174,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
 
-    // Login function to authenticate user from localStorage
+   
     async function login(formData) {
         await new Promise(resolve => setTimeout(resolve, 3000));
 
@@ -230,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Validate form field on input
+
     function validateFormField(event) {
         const input = event.target;
         const formGroup = input.parentElement;
